@@ -5,8 +5,9 @@ import NotFound from "./components/notFound";
 import MovieForm from "./components/movieForm";
 import { Route, Routes, Navigate } from "react-router-dom";
 import NavBar from "./components/navBar";
-import "./App.css";
 import React from "react";
+import LoginForm from "./components/loginForm";
+import "./App.css";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<NavBar />
 			<main className="container">
 				<Routes>
+					<Route path="/login" element={<LoginForm />}></Route>
 					<Route path="/movies/:id" element={<MovieForm />}></Route>
 					<Route path="/movies" element={<Movies />}></Route>
 					<Route path="/customers" element={<Customers />}></Route>
